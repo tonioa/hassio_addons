@@ -4,7 +4,7 @@
   "slug": "tydom2mqtt",
   "description": "The missing link between your tydom box and an MQTT broker, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "url": "https://github.com/WiwiWillou/tydom2mqtt",
+  "url": "https://github.com/mrwiwi/tydom2mqtt.git",
   "startup": "system",
   "boot": "auto",
   "host_network": true,
