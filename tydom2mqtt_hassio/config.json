@@ -15,7 +15,7 @@
     "TYDOM_IP": "",
     "TYDOM_PASSWORD":"TYDOM_PASSWORD",
     "MQTT_HOST": "localhost",
-    "MQTT_USERNAME": "user",
+    "MQTT_USER": "user",
     "MQTT_PASSWORD": "pass"
   },
   "schema":
