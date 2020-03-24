@@ -2,12 +2,13 @@
   "name": "tydom2mqtt",
   "version": "0.1",
   "slug": "tydom2mqtt",
-  "description": "The missing link between your tydom box and an MQTT broker",
+  "description": "The missing link between your tydom box and an MQTT broker, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/WiwiWillou/tydom2mqtt",
   "startup": "system",
   "boot": "auto",
   "host_network": true,
+  "image":"mrwiwi/tydom2mqtt",
   "options":
   {
     "TYDOM_MAC":"001A25xxxxxx",
@@ -25,6 +26,5 @@
     "MQTT_HOST": "str",
     "MQTT_USERNAME": "str",
     "MQTT_PASSWORD": "str"
-  },
-  "image":"mrwiwi/tydom2mqtt"
+  }  
 }
