@@ -1,7 +1,7 @@
 {
-  "name": "tydom2mqtt",
+  "name": "tydom2mqtt_edge",
   "version": "latest",
-  "slug": "tydom2mqtt",
+  "slug": "tydom2mqtt_edge",
   "description": "The missing link between your tydom box and an MQTT broker, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/mrwiwi/tydom2mqtt.git",
@@ -24,7 +24,7 @@
     "TYDOM_IP": "str?",
     "TYDOM_PASSWORD":"str",
     "MQTT_HOST": "str?",
-    "MQTT_USERNAME": "str",
+    "MQTT_USER": "str",
     "MQTT_PASSWORD": "str"
   }  
 }
