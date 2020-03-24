@@ -8,7 +8,7 @@
   "startup": "system",
   "boot": "auto",
   "host_network": true,
-  "image":"mrwiwi/tydom2mqtt",
+  "image":"mrwiwi/tydom2mqtt_edge",
   "options":
   {
     "TYDOM_MAC":"001A25xxxxxx",
