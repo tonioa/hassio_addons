@@ -1,6 +1,6 @@
 {
   "name": "tydom2mqtt",
-  "version": "0.1",
+  "version": "latest",
   "slug": "tydom2mqtt",
   "description": "The missing link between your tydom box and an MQTT broker, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
