@@ -1,0 +1,29 @@
+{
+  "name": "tydom2mqtt",
+  "version": "0.1",
+  "slug": "tydom2mqtt",
+  "description": "The missing link between your tydom box and an MQTT broker",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "url": "https://github.com/WiwiWillou/tydom2mqtt",
+  "startup": "system",
+  "boot": "auto",
+  "host_network": true,
+  "options":
+  {
+    "TYDOM_MAC":"001A25xxxxxx",
+    "TYDOM_IP": "",
+    "TYDOM_PASSWORD":"TYDOM_PASSWORD",
+    "MQTT_HOST": "localhost",
+    "MQTT_USERNAME": "user",
+    "MQTT_PASSWORD": "pass"
+  },
+  "schema":
+  {
+    "TYDOM_MAC":"str",
+    "TYDOM_IP": "str",
+    "TYDOM_PASSWORD":"str",
+    "MQTT_HOST": "str",
+    "MQTT_USERNAME": "str",
+    "MQTT_PASSWORD": "str"
+  },
+}
