@@ -21,9 +21,9 @@
   "schema":
   {
     "TYDOM_MAC":"str",
-    "TYDOM_IP": "str",
+    "TYDOM_IP": "str?",
     "TYDOM_PASSWORD":"str",
-    "MQTT_HOST": "str",
+    "MQTT_HOST": "str?",
     "MQTT_USERNAME": "str",
     "MQTT_PASSWORD": "str"
   }  
