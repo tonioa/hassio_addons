@@ -17,8 +17,8 @@
     "MQTT_HOST": "localhost",
     "MQTT_USER": "mqtt_user",
     "MQTT_PASSWORD": "mqtt_pass",
-    "MQTT_PORT": "1883",
-    "MQTT_SSL": "true"
+    "MQTT_PORT": 1883,
+    "MQTT_SSL": true
   },
   "schema":
   {
