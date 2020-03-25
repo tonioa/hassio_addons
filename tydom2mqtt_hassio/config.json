@@ -2,7 +2,7 @@
   "name": "tydom2mqtt_edge",
   "version": "latest",
   "slug": "tydom2mqtt_edge",
-  "description": "The missing link between your tydom box and an MQTT broker, hassio addon version",
+  "description": "The missing unofficial link between your Deltadore's Tydom hub and an MQTT broker, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/mrwiwi/tydom2mqtt.git",
   "startup": "system",
