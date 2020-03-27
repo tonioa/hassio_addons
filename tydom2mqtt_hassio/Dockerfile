@@ -8,11 +8,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    apt-get install -y --no-install-recommends python3 \
+    apt-get update \
+    \
+    && apt-get install -y \
+        python3 \
+    \
     && pip3 install websockets gmqtt requests \
-    && curl -L -s \
-        "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
-        | tar zxvf - -C /opt/
+    \
+    && curl https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz | tar zxvf - -C /opt/
+    
     
 
 # Copy root filesystem
