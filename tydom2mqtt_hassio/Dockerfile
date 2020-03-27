@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:7.0.3
+ARG BUILD_FROM=hassioaddons/base:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
