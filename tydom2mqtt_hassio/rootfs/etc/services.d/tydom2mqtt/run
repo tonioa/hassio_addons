@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/execlineb -P
 # ==============================================================================
 # Home Assistant Add-on: tydom2MQTT
 # Runs tydom2MQTT
@@ -8,6 +8,6 @@ bashio::log.info 'Starting tydom2MQTT...'
 
 # ls
 # ls /opt/
-# python3 -u /opt/tydom2MQTT/main.py
+python3 -u /opt/tydom2MQTT/main.py
 
 # python3 -u main.py
