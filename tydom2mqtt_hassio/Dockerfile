@@ -1,4 +1,4 @@
-ARG BUILD_FROM=homeassistan/base:latest
+ARG BUILD_FROM=homeassistant/base-python:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -14,9 +14,7 @@ RUN \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
     && tar zxvf \
         /tmp/tydom2mqtt.tar.gz \
-        --strip 1 -C /opt \
-    && rm -f -r \
-        /tmp/*
+        --strip 1 -C /opt
 
 # Copy root filesystem
 COPY rootfs /
