@@ -2,17 +2,16 @@ ARG BUILD_FROM=hassioaddons/base:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
-# Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+# # Set shell
+# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-# hadolint ignore=DL3003
-RUN \
-    apk add --no-cache python3 \
-    && pip3 install websockets gmqtt requests \
-    && curl -L -s \
-        "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
-        | tar zxvf - -C /opt/
+RUN apk add --no-cache python3 python3-dev gcc linux-headers musl-dev tcpdump \
+    && pip3 install --no-cache --upgrade pip
+COPY requirements.txt /tmp/
+RUN pip3 install --requirement /tmp/requirements.txt
+
+RUN curl -L -s "https://github.com/portainer/portainer/releases/download/1.23.2/portainer-1.23.2-linux-${ARCH}.tar.gz" | tar zxvf - -C /opt/
 
 # Copy root filesystem
 COPY rootfs /
