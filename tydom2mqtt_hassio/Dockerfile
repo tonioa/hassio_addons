@@ -8,8 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    apk add --no-cache python3 \
-    && pip3 install websockets gmqtt requests \
+    pip3 install websockets gmqtt requests \
     && curl -J -L -o /tmp/tydom2mqtt.tar.gz \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
     && tar zxvf \
