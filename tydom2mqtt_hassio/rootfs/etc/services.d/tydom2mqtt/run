@@ -1,4 +1,4 @@
-#!/usr/bin/execlineb -P
+#!/usr/bin/with-contenv python3
 # ==============================================================================
 # Home Assistant Add-on: tydom2MQTT
 # Runs tydom2MQTT
@@ -8,6 +8,6 @@
 
 # ls
 # ls /opt/
-python3 -u /opt/tydom2MQTT/main.py
+/opt/tydom2MQTT/main.py
 
 # python3 -u main.py
