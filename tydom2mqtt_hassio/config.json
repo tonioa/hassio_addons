@@ -8,7 +8,7 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
-  "image":"mrwiwi/tydom2mqtt_edge",
+  "map": ["config:r", "share:r"],
   "options":
   {
     "TYDOM_MAC": "001A25xxxxxx",
@@ -25,6 +25,7 @@
   },
   "schema":
   {
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
     "TYDOM_MAC":"str",
     "TYDOM_IP": "str?",
     "TYDOM_PASSWORD":"str",
