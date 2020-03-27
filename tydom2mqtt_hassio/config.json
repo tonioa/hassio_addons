@@ -8,6 +8,7 @@
     "startup": "services",
     "boot": "auto",
     "host_network": true,
+    "map": ["config"]
     "image":"mrwiwi/tydom2mqtt_edge",
     "options":
     {
