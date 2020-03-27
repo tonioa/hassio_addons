@@ -1,6 +1,5 @@
-ARG BUILD_FROM=homeassistant/base-python:latest
-# hadolint ignore=DL3006
-FROM ${BUILD_FROM}
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]

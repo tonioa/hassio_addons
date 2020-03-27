@@ -1,10 +1,9 @@
-  
 {
   "build_from": {
-      "amd64": "homeassistant/amd64-base-python:latest",
-      "i386": "homeassistant/i386-base-python:latest",
-      "armhf": "homeassistant/armhf-base-python:latest",
-      "armv7": "homeassistant/armhf-base-python:latest",
-      "aarch64": "homeassistant/aarch64-base-python:latest"
-  }
+    "aarch64": "hassioaddons/base-aarch64:latest",
+    "amd64": "hassioaddons/base-amd64:latest",
+    "armhf": "hassioaddons/base-armhf:latest",
+    "armv7": "hassioaddons/base-armv7:latest"
+  },
+  "args": {}
 }
