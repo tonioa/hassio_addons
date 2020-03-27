@@ -6,8 +6,7 @@ FROM ${BUILD_FROM}
 # SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-RUN apk add --no-cache python3 python3-dev gcc linux-headers musl-dev tcpdump \
-    && pip3 install --no-cache --upgrade pip
+RUN apk add --no-cache python3
 COPY requirements.txt /tmp/
 RUN pip3 install --requirement /tmp/requirements.txt
 
