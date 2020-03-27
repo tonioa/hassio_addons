@@ -3,15 +3,16 @@ ARG BUILD_FROM=hassioaddons/base:latest
 FROM ${BUILD_FROM}
 
 # # Set shell
-# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
 RUN apk add --no-cache python3
 COPY requirements.txt /tmp/
 RUN pip3 install --requirement /tmp/requirements.txt
 
-RUN curl -L -s "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" | tar zxvf - -C /opt/
-
+RUN curl -L -s \
+        "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
+        | tar zxvf - -C /opt/
 # Copy root filesystem
 COPY rootfs /
 
