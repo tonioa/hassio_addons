@@ -6,8 +6,8 @@
 
 bashio::log.info 'Starting tydom2MQTT...'
 
-ls
-ls /opt/
-python3 -u /opt/tydom2MQTT/main.py
+# ls
+# ls /opt/
+# python3 -u /opt/tydom2MQTT/main.py
 
 # python3 -u main.py
