@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv execline
+#!/usr/bin/with-contenv execlineb
 # ==============================================================================
 # Home Assistant Add-on: tydom2MQTT
 # Runs tydom2MQTT
