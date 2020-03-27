@@ -10,13 +10,10 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache python3 \
     && pip3 install websockets gmqtt requests \
-    && curl -J -L -o /tmp/tydom2mqtt.tar.gz \
+    && curl -L -s \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
-    && tar zxvf \
-        /tmp/tydom2mqtt.tar.gz \
-        --strip 1 -C /opt \
-    && rm -f -r \
-        /tmp/*
+        | tar zxvf - -C /opt/
+    
 
 # Copy root filesystem
 COPY rootfs /
