@@ -4,9 +4,6 @@
 # Runs tydom2MQTT
 # ==============================================================================
 
-bashio::log.info 'Starting tydom2MQTT main...'
-# Run tydom2MQTT
-
 ls
 ls /opt/
 exec python3 -u /opt/tydom2MQTT/main.py
