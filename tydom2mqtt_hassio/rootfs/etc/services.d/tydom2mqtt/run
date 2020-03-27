@@ -1,13 +1,14 @@
-#!/usr/bin/bashio
+#!/usr/bin/with-contenv bashio
 # ==============================================================================
 # Home Assistant Add-on: tydom2MQTT
 # Runs tydom2MQTT
 # ==============================================================================
+echo Hello world!
 
 ls /
 ls /usr/bin
 ls /opt/
 
-python /opt/tydom2MQTT/main.py
+exec python /opt/tydom2MQTT/main.py
 
 # python3 -u main.py
