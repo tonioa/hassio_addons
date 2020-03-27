@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=hassioaddons/base:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -13,7 +13,6 @@ RUN \
     && curl -L -s \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
         | tar zxvf - -C /opt/
-    
 
 # Copy root filesystem
 COPY rootfs /
