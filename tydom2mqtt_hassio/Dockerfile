@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:latest
+ARG BUILD_FROM=hassioaddons/ubuntu-base:5.0.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    apk add --no-cache python3 \
+    apt-get install -y --no-install-recommends python3 \
     && pip3 install websockets gmqtt requests \
     && curl -L -s \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
