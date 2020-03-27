@@ -9,4 +9,4 @@ bashio::log.info 'Starting tydom2MQTT...'
 cd /opt/ \
     || bashio::exit.nok "Could not change directory to application"
 
-exec python3 -u main.py
+python3 -u main.py
