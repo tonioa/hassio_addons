@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/ubuntu-base:5.0.1
+ARG BUILD_FROM=homeassistan/base:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -8,17 +8,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    apt-get update \
-    \
-    && apt-get install -y \
-        python3 \
-        python3-pip \
-    \
+    apk add --no-cache python3 \
     && pip3 install websockets gmqtt requests \
-    \
-    && curl https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz | tar zxvf - -C /opt/
-    
-    
+    && curl -J -L -o /tmp/tydom2mqtt.tar.gz \
+        "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
+    && tar zxvf \
+        /tmp/tydom2mqtt.tar.gz \
+        --strip 1 -C /opt \
+    && rm -f -r \
+        /tmp/*
 
 # Copy root filesystem
 COPY rootfs /
