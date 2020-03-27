@@ -8,7 +8,6 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
-  "map": ["config:r", "share:r"],
   "options":
   {
     "TYDOM_MAC": "001A25xxxxxx",
