@@ -1,5 +1,6 @@
 ARG BUILD_FROM
-FROM $BUILD_FROM
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -7,12 +8,15 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    pip3 install websockets gmqtt requests \
+    apk add --no-cache python3 \
+    && pip3 install websockets gmqtt requests \
     && curl -J -L -o /tmp/tydom2mqtt.tar.gz \
         "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
     && tar zxvf \
         /tmp/tydom2mqtt.tar.gz \
-        --strip 1 -C /opt
+        --strip 1 -C /opt \
+    && rm -f -r \
+        /tmp/*
 
 # Copy root filesystem
 COPY rootfs /
