@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM:hassioaddons/debian-base:latest
 FROM ${BUILD_FROM}
 
 # Setup base
