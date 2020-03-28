@@ -1,5 +1,4 @@
 ARG BUILD_FROM
-# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # # Set shell
@@ -11,7 +10,7 @@ COPY requirements.txt /tmp/
 RUN pip3 install --requirement /tmp/requirements.txt
 
 RUN curl -L -s \
-        "https://github.com/mrwiwi/tydom2mqtt/archive/0.85.tar.gz" \
+        "https://github.com/mrwiwi/tydom2mqtt/archive/0.89c.tar.gz" \
         | tar zxvf - -C /opt/
 
 RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
@@ -24,6 +23,8 @@ ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
+
+CMD [ "python", "-u", "/opt/tydom2mqtt/forever.py" ]
 # Labels
 LABEL \
     io.hass.name="tydom2mqtt" \
@@ -47,4 +48,3 @@ LABEL \
 # COPY . /app
 # WORKDIR /app
 # RUN pip3 install -r requirements.txt
-# CMD [ "python", "-u", "./main.py" ]
