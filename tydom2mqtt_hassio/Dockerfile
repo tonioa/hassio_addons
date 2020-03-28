@@ -1,6 +1,8 @@
-ARG BUILD_FROM:hassioaddons/debian-base:latest
+ARG BUILD_FROM=hassioaddons/base:7.0.3
+# hadolint ignore=DL3006
 FROM ${BUILD_FROM}
-
+# Set shell
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 RUN apk add --no-cache python3
 COPY requirements.txt /tmp/
@@ -33,7 +35,7 @@ LABEL \
     org.label-schema.description="Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course." \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="tydom2MQTT" \
-    org.label-schema.schema-version="0.85" \
+    org.label-schema.schema-version="0.89c" \
     org.label-schema.url="https://community.home-assistant.io/t/home-assistant-community-add-on-tydom2MQTT/68836?u=frenck" \
     org.label-schema.usage="https://github.com/mrwiwi/tydom2mqtt/blob/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
