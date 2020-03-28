@@ -1,11 +1,8 @@
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
-# # Set shell
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
 # Setup base
-# RUN apk add --no-cache python3
+RUN apk add --no-cache python3
 COPY requirements.txt /tmp/
 RUN pip3 install --requirement /tmp/requirements.txt
 
