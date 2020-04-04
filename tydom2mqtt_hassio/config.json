@@ -1,6 +1,6 @@
 {
     "name": "tydom2mqtt_edge",
-    "version": "release-0.89d",
+    "version": "release-0.90",
     "slug": "tydom2mqtt_edge",
     "description": "Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course, hassio addon version",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
