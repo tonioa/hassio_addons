@@ -1,6 +1,6 @@
 {
     "name": "Tydom2MQTT - x86",
-    "version": "release-0.90c",
+    "version": "release-0.90cc",
     "slug": "tydom2mqtt_x86",
     "description": "Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course, hassio addon version",
     "arch": ["amd64", "i386"],
