@@ -1,13 +1,13 @@
 {
-  "name": "Tydom2MQTT Beta",
-  "version": "test_hassio_base_0.90a",
+  "name": "Tydom2MQTT - Beta",
+  "version": "release_0.90c",
   "slug": "tydom2mqtt_hassio",
   "description": "Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/mrwiwi/tydom2mqtt.git",
   "startup": "system",
   "boot": "auto",
-  "host_network": true,
+  "host_network": "true",
   "options":
   {
     "TYDOM_MAC": "001A25xxxxxx",
