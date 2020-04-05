@@ -3,7 +3,7 @@
     "version": "release-0.90a",
     "slug": "tydom2mqtt_x86",
     "description": "Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course, hassio addon version",
-    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "arch": ["amd64", "i386"],
     "url": "https://github.com/mrwiwi/tydom2mqtt.git",
     "startup": "services",
     "boot": "auto",
