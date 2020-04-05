@@ -1,15 +1,20 @@
-ARG BUILD_FROM=hassioaddons/base:7.0.3
-# hadolint ignore=DL3006
+# FROM python:3.8-slim-buster
+ARG BUILD_FROM=hassioaddons/base:latest
 FROM ${BUILD_FROM}
-# Set shell
+
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+WORKDIR /
 # Setup base
-RUN apk add --no-cache python3
 COPY requirements.txt /tmp/
+
+RUN apk add --no-cache python3
+
+
 RUN pip3 install --requirement /tmp/requirements.txt
 
 RUN curl -L -s \
-        "https://github.com/mrwiwi/tydom2mqtt/archive/0.89c.tar.gz" \
+        "https://github.com/mrwiwi/tydom2mqtt/archive/0.90a.tar.gz" \
         | tar zxvf - -C /opt/
 
 RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
@@ -17,13 +22,20 @@ RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
 # Copy root filesystem
 COPY rootfs /
 
+
+# COPY . /
+# WORKDIR /
+# RUN apk add --no-cache python3
+# RUN pip3 install -r requirements.txt
+
+CMD [ "python", "-u", "/opt/tydom2mqtt/forever.py" ]
+
+
 # Build arguments
 ARG BUILD_ARCH
 ARG BUILD_DATE
 ARG BUILD_REF
 ARG BUILD_VERSION
-
-CMD [ "python", "-u", "/opt/tydom2mqtt/forever.py" ]
 # Labels
 LABEL \
     io.hass.name="tydom2mqtt" \
@@ -35,7 +47,7 @@ LABEL \
     org.label-schema.description="Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course." \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="tydom2MQTT" \
-    org.label-schema.schema-version="0.89c" \
+    org.label-schema.schema-version="0.85" \
     org.label-schema.url="https://community.home-assistant.io/t/home-assistant-community-add-on-tydom2MQTT/68836?u=frenck" \
     org.label-schema.usage="https://github.com/mrwiwi/tydom2mqtt/blob/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
@@ -47,3 +59,4 @@ LABEL \
 # COPY . /app
 # WORKDIR /app
 # RUN pip3 install -r requirements.txt
+# CMD [ "python", "-u", "./main.py" ]
