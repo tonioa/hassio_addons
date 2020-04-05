@@ -20,7 +20,9 @@
     "MQTT_USER": "mqtt_user",
     "MQTT_PASSWORD": "mqtt_pass",
     "MQTT_PORT": 1883,
-    "MQTT_SSL": false
+    "MQTT_SSL": false,
+    "log_level": "info"
+
   },
   "schema":
   {
