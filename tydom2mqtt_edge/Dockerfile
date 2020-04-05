@@ -5,10 +5,7 @@ FROM ${BUILD_FROM}
 ENV LANG C.UTF-8
 
 # Copy data for add-on
-# COPY run.sh /run.sh
-# RUN chmod a+x /run.sh
-
-COPY rootfs /
+COPY . /
 
 COPY requirements.txt /tmp/
 RUN apk add --no-cache python3
@@ -20,8 +17,8 @@ RUN curl -L -s \
         | tar zxvf - -C /opt/
 
 RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
-# RUN chmod a+x /run.sh
+RUN chmod a+x /run.sh
 
-# WORKDIR /data
+WORKDIR /data
 
-# CMD [ "/run.sh" ]
+CMD [ "/run.sh" ]
