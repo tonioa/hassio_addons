@@ -1,12 +1,12 @@
-ARG BUILD_FROM=hassioaddons/base:7.1.0
+ARG BUILD_FROM=hassioaddons/base:latest
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 ENV LANG C.UTF-8
 
 # Copy data for add-on
-COPY run.sh /run.sh
-RUN chmod a+x /run.sh
+# COPY run.sh /run.sh
+# RUN chmod a+x /run.sh
 
 COPY rootfs /
 
@@ -24,4 +24,4 @@ RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
 
 # WORKDIR /data
 
-CMD [ "/run.sh" ]
+# CMD [ "/run.sh" ]
