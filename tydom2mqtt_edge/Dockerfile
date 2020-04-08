@@ -17,8 +17,8 @@ RUN curl -L -s \
         | tar zxvf - -C /opt/
 
 RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
-RUN chmod a+x /run.sh
+
 COPY . /
 # WORKDIR /data
-
+RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
