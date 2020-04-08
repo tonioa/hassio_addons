@@ -7,4 +7,4 @@ bashio::log.info 'Starting tydom2MQTT service...'
 # echo 'Starting tydom2MQTT service...'
 
 # exec /run.sh
-python3 -u /opt/tydom2mqtt/forever.py /opt/tydom2mqtt/main.py
+# python3 -u /opt/tydom2mqtt/forever.py /opt/tydom2mqtt/main.py
