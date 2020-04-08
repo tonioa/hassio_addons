@@ -18,7 +18,6 @@ RUN curl -L -s \
 
 RUN mv /opt/tydom2mqtt* /opt/tydom2mqtt
 
-COPY . /
-# WORKDIR /data
+COPY run.sh /run.sh
 RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
