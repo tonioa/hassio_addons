@@ -1,8 +1,8 @@
 {
   "name": "Tydom2MQTT - Beta",
-  "version": "release_0.93",
+  "version": "release_0.94",
   "slug": "tydom2mqtt_hassio",
-  "description": "Link between a Delta Dore's Tydom Hub and and a MQTT broker, unofficial of course, hassio addon version",
+  "description": "Link between a Delta Dore's Tydom 1.0 Hub and and a MQTT broker, unofficial of course, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/mrwiwi/tydom2mqtt.git",
   "startup": "system",
