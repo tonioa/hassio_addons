@@ -4,7 +4,7 @@
   "slug": "tydom2mqtt_hassio",
   "description": "Link between a Delta Dore's Tydom 1.0 Hub and and a MQTT broker, unofficial of course, hassio addon version",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "url": "https://github.com/mrwiwi/tydom2mqtt.git",
+  "url": "https://github.com/tonioa/tydom2mqtt.git",
   "startup": "system",
   "boot": "auto",
   "host_network": "true",
